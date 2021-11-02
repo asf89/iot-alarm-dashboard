@@ -1,9 +1,11 @@
 .container {
   background-color: #ffffff;
+  min-height: 5rem;
 }
 
 .title {
   text-align: center;
   font-size: 16;
   font-weight: bold;
+  color: #000000;
 }

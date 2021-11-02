@@ -1,17 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from 'screens';
-import routes from 'screens/routes';
 import './App.css';
 
-export default () => {
+const App = () => {
   return (
     <React.StrictMode>
-      <BrowserRouter>
-        <Switch>
-          <Route path={routes.home} component={Home} />
-        </Switch>
-      </BrowserRouter>
+      <Home />
     </React.StrictMode>
   );
 };
+
+export default App;
