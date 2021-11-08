@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 
 const Header = (props) => {
   const { title } = props;
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
