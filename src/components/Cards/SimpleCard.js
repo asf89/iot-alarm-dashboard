@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import styles from './SimpleCard.module.css';
 
 const SimpleCard = (props) => {
-  const { content } = props;
-  return (
-    <div className={styles.card}>
-      <div className={styles.content}>{content}</div>
-    </div>
-  );
+  const { children, className } = props;
+  const cardClass = `${styles.card} ${styles.content} ${className}`;
+
+  return <div className={cardClass}>{children}</div>;
 };
 
 SimpleCard.defaultProps = {
-  content: '',
+  children: null,
+  variant: '',
 };
 
 SimpleCard.propTypes = {
-  content: PropTypes.string,
+  children: PropTypes.node,
+  variant: PropTypes.string,
 };
 
 export default SimpleCard;
