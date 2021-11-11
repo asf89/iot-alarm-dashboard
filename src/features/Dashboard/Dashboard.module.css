@@ -4,3 +4,20 @@
   background-color: #85c997;
   height: 100%;
 }
+
+.temp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.values {
+  display: flex;
+}

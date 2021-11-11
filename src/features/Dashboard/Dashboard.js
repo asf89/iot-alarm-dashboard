@@ -7,8 +7,16 @@ const Dashboard = () => {
   return (
     <div className={styles.container}>
       <Header title={text} />
-      <CardContainer title="Temperature" />
-      <SimpleCard content="1956 °C" />
+      <div className={styles.temp}>
+        <div className={styles.info}>
+          <CardContainer title="Temperature" />
+          <SimpleCard content="1956 °C" />
+        </div>
+        <div className={styles.info}>
+          <CardContainer title="Reference" />
+          <SimpleCard content="50 °C" />
+        </div>
+      </div>
     </div>
   );
 };
