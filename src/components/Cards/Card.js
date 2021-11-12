@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './SimpleCard.module.css';
+import styles from './Card.module.css';
 
 const SimpleCard = (props) => {
   const { children, className } = props;
