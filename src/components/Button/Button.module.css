@@ -1,0 +1,29 @@
+.button {
+  height: 2.4rem;
+  width: 9rem;
+  border-radius: 0.3rem;
+}
+
+.button :global(.MuiButton-root) {
+  height: 100%;
+  width: 100%;
+  font-family: Lato;
+  font-size: 0.8rem;
+  text-transform: none;
+  color: inherit;
+  background-color: inherit;
+}
+
+.button.disabled :global(.MuiButton-root) {
+  background-color: #e4e4e4;
+}
+
+.button.light {
+  color: #ffffff;
+  background-color: #85c997;
+}
+
+.button.dark {
+  color: #ffffff;
+  background-color: #0d707f;
+}
