@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SimpleCard } from 'components';
+import { Card } from 'components';
 import styles from './Modal.module.css';
 
 const Modal = (props) => {
@@ -9,9 +9,9 @@ const Modal = (props) => {
 
   return (
   <div className={`${styles.container} ${visibleClass}`}>
-    <SimpleCard className={`${styles.modal} ${visibleClass} ${styles[size] ?? ''}`}>
+    <Card className={`${styles.modal} ${visibleClass} ${styles[size] ?? ''}`}>
       {visible && children}
-    </SimpleCard>
+    </Card>
   </div>
   );
 };
