@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
 const ButtonComponent = (props) => {
-  const { style, text, variant } = props;
+  const { style, text, variant, action } = props;
   const buttonClass = `${styles.button} ${styles[variant]}`;
   return (
     <div className={buttonClass}>
-      <Button style={style}>{text}</Button>
+      <Button style={style} onClick={action}>
+        {text}
+      </Button>
     </div>
   );
 };
@@ -17,6 +19,7 @@ ButtonComponent.defaultProps = {
   style: undefined,
   text: '',
   variant: 'light',
+  action: () => undefined,
 };
 
 ButtonComponent.propTypes = {
@@ -28,6 +31,7 @@ ButtonComponent.propTypes = {
   }),
   text: PropTypes.string,
   variant: PropTypes.oneOf(['light', 'dark']),
+  action: PropTypes.func,
 };
 
 export default ButtonComponent;
