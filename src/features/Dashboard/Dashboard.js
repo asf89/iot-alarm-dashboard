@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Header, CardContainer, Card, Modal, Button } from 'components';
+import { FirebaseService } from 'services';
 import styles from './Dashboard.module.css';
 
 const text = 'Project IoT';
-const tempMsd = 25;
-const tempRef = 50;
+const tempRef = 40;
 
 const Dashboard = () => {
   const [modal, setModal] = useState(false);
+  const [tempMsd, setTempMsd] = useState(25);
+
+  useEffect(() => {
+    FirebaseService.getCount('count', (tempMsd) => setTempMsd(tempMsd));
+  });
 
   useEffect(() => {
     tempMsd >= tempRef ? setModal(true) : setModal(false);
-  }, []);
+  }, [tempMsd]);
 
   return (
     <div className={styles.container}>
